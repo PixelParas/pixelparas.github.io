@@ -38,8 +38,11 @@
             var string = document.f1.PrachiIDFKWhyAreYouLookingAtThis.value;
             var result = "";
             for(var i = 0; i < string.length; i++){
-                possibles = map[string[i]];
-                result += `(${possibles[Math.floor(Math.random()*possibles.length)]})`;
+                if(string[i] == " ")
+                    result += " ";
+                else 
+                    possibles = map[string[i]];
+                    result += `(${possibles[Math.floor(Math.random()*possibles.length)]})`;
             }
                 var textToCopy = result;
 
