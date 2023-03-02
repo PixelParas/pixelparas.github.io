@@ -31,15 +31,14 @@
                 "w" : ["PΔV"],
                 "x" : ["1/ωC"],
                 "y" : ["stress/strain"],
-                "z" : ["(R²+(Xₗ-Xc)²)½"],
-                " " : " "
+                "z" : ["(R²+(Xₗ-Xc)²)½"]
             };
 
             var string = document.f1.PrachiIDFKWhyAreYouLookingAtThis.value.toLowerCase();
             var result = "";
             for(var i = 0; i < string.length; i++){
                 if(string[i] == " ")
-                    result += " ";
+                    result += "\n";
                 else 
                     possibles = map[string[i]];
                     result += `(${possibles[Math.floor(Math.random()*possibles.length)]})`;
