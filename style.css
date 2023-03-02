@@ -10,6 +10,12 @@ a {
     color: #6be3a9;
 }
 
+#textboxid
+{
+    height:200px;
+    font-size:14pt;
+}
+
 h1, h2, h3 {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
