@@ -3,10 +3,63 @@
 <head>
     <title> I DID IT CUZ I WAS BORED </title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function physiks(){
+            var map = {
+                "a": ["F/m"],
+                "b" : ["µ₀i/4πr"],
+                "c" : ["q/v"],
+                "d" : ["2r"],
+                "e" : ["2.71828"],
+                "f" : ["ma"],
+                "g" : ["9.8"],
+                "h" : ["6.62607 × 10⁻³⁴"],
+                "i" : ["V/R"],
+                "j" : ["σe"],
+                "k" : ["1/4πε₀"],
+                "l" : ["r × p"],
+                "m" : ["F/m"],
+                "n" : ["PV/RT"],
+                "o" : ["Φ"],
+                "p" : ["mvr"],
+                "q" : ["CV"],
+                "r" : ["8.31432"],
+                "s" : ["ut + 1/2at²"],
+                "t" : ["d/v"],
+                "u" : ["mgh"],
+                "v" : ["d/t"],
+                "w" : ["PΔV"],
+                "x" : ["1/ωC"],
+                "y" : ["stress/strain"],
+                "z" : ["(R²+(Xₗ-Xc)²)½"],
+                " " : " "
+            };
+
+            var string = document.f1.PrachiIDFKWhyAreYouLookingAtThis.value;
+            var result = "";
+            for(var i = 0; i < string.length; i++){
+                possibles = map[string[i]];
+                result += `(${possibles[Math.floor(Math.random()*possibles.length)]})`;
+            }
+                var textToCopy = result;
+
+                var myTemporaryInputElement = document.createElement("input");
+                myTemporaryInputElement.type = "text";
+                myTemporaryInputElement.value = textToCopy;
+
+                document.body.appendChild(myTemporaryInputElement);
+
+                myTemporaryInputElement.select();
+                document.execCommand("Copy");
+
+                document.body.removeChild(myTemporaryInputElement);
+            }
+    </script>
 </head>
 <body>
-    <form>
-        <input type="button" value="disagree">
+    <form name="f1">
+        <input type="text" name="PrachiIDFKWhyAreYouLookingAtThis"><br>
+        <input type="button" value="Just do it" onClick="physiks()"><br>
     </form>
 </body>
 </html>
